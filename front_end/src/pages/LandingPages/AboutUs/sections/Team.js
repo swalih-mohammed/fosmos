@@ -30,6 +30,9 @@ import team2 from "assets/images/bruce-mars.jpg";
 import team3 from "assets/images/ivana-squares.jpg";
 import team4 from "assets/images/ivana-square.jpg";
 
+import Jamalsaheb from "assets/images/jamal_saheb.jpeg";
+
+
 function Team() {
   return (
     <MKBox
@@ -57,8 +60,8 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team1}
-                name="Emma Roberts"
+                image={Jamalsaheb}
+                name="Jamal Saheb"
                 position={{ color: "info", label: "UI Designer" }}
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
@@ -67,8 +70,8 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team2}
-                name="William Pearce"
+                image={Jamalsaheb}
+                name="Jamal Saheb"
                 position={{ color: "info", label: "Boss" }}
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
@@ -77,8 +80,8 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
-                image={team3}
-                name="Ivana Flow"
+                image={Jamalsaheb}
+                name="Jamal Saheb"
                 position={{ color: "info", label: "Athlete" }}
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."
               />
@@ -87,7 +90,7 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
-                image={team4}
+                image={Jamalsaheb}
                 name="Marquez Garcia"
                 position={{ color: "info", label: "JS Developer" }}
                 description="Artist is a term applied to a person who engages in an activity deemed to be an art."

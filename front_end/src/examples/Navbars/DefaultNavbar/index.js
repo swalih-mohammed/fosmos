@@ -30,6 +30,8 @@ import Grow from "@mui/material/Grow";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import MuiLink from "@mui/material/Link";
+import Avatar from "@mui/material/Avatar";
+
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -42,6 +44,8 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
+import bgImage from "assets/images/fosmo_logo.jpeg";
+
 
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -332,84 +336,84 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const renderNestedRoutes = routes.map(({ collapse, columns }) =>
     collapse && !columns
       ? collapse.map(({ name: parentName, collapse: nestedCollapse }) => {
-          let template;
+        let template;
 
-          if (parentName === nestedDropdownName) {
-            template =
-              nestedCollapse &&
-              nestedCollapse.map((item) => {
-                const linkComponent = {
-                  component: MuiLink,
-                  href: item.href,
-                  target: "_blank",
-                  rel: "noreferrer",
-                };
+        if (parentName === nestedDropdownName) {
+          template =
+            nestedCollapse &&
+            nestedCollapse.map((item) => {
+              const linkComponent = {
+                component: MuiLink,
+                href: item.href,
+                target: "_blank",
+                rel: "noreferrer",
+              };
 
-                const routeComponent = {
-                  component: Link,
-                  to: item.route,
-                };
+              const routeComponent = {
+                component: Link,
+                to: item.route,
+              };
 
-                return (
-                  <MKTypography
-                    key={item.name}
-                    {...(item.route ? routeComponent : linkComponent)}
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    variant="button"
-                    textTransform="capitalize"
-                    minWidth={item.description ? "14rem" : "12rem"}
-                    color={item.description ? "dark" : "text"}
-                    fontWeight={item.description ? "bold" : "regular"}
-                    py={item.description ? 1 : 0.625}
-                    px={2}
-                    sx={({ palette: { grey, dark }, borders: { borderRadius } }) => ({
-                      borderRadius: borderRadius.md,
-                      cursor: "pointer",
-                      transition: "all 300ms linear",
+              return (
+                <MKTypography
+                  key={item.name}
+                  {...(item.route ? routeComponent : linkComponent)}
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  variant="button"
+                  textTransform="capitalize"
+                  minWidth={item.description ? "14rem" : "12rem"}
+                  color={item.description ? "dark" : "text"}
+                  fontWeight={item.description ? "bold" : "regular"}
+                  py={item.description ? 1 : 0.625}
+                  px={2}
+                  sx={({ palette: { grey, dark }, borders: { borderRadius } }) => ({
+                    borderRadius: borderRadius.md,
+                    cursor: "pointer",
+                    transition: "all 300ms linear",
 
-                      "&:hover": {
-                        backgroundColor: grey[200],
+                    "&:hover": {
+                      backgroundColor: grey[200],
+                      color: dark.main,
+
+                      "& *": {
                         color: dark.main,
-
-                        "& *": {
-                          color: dark.main,
-                        },
                       },
-                    })}
-                  >
-                    {item.description ? (
-                      <MKBox>
-                        {item.name}
-                        <MKTypography
-                          display="block"
-                          variant="button"
-                          color="text"
-                          fontWeight="regular"
-                          sx={{ transition: "all 300ms linear" }}
-                        >
-                          {item.description}
-                        </MKTypography>
-                      </MKBox>
-                    ) : (
-                      item.name
-                    )}
-                    {item.collapse && (
-                      <Icon
-                        fontSize="small"
-                        sx={{ fontWeight: "normal", verticalAlign: "middle", mr: -0.5 }}
+                    },
+                  })}
+                >
+                  {item.description ? (
+                    <MKBox>
+                      {item.name}
+                      <MKTypography
+                        display="block"
+                        variant="button"
+                        color="text"
+                        fontWeight="regular"
+                        sx={{ transition: "all 300ms linear" }}
                       >
-                        keyboard_arrow_right
-                      </Icon>
-                    )}
-                  </MKTypography>
-                );
-              });
-          }
+                        {item.description}
+                      </MKTypography>
+                    </MKBox>
+                  ) : (
+                    item.name
+                  )}
+                  {item.collapse && (
+                    <Icon
+                      fontSize="small"
+                      sx={{ fontWeight: "normal", verticalAlign: "middle", mr: -0.5 }}
+                    >
+                      keyboard_arrow_right
+                    </Icon>
+                  )}
+                </MKTypography>
+              );
+            });
+        }
 
-          return template;
-        })
+        return template;
+      })
       : null
   );
 
@@ -476,9 +480,26 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+            {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
               {brand}
-            </MKTypography>
+            </MKTypography> */}
+
+            {/* <Grid container spacing={2}>
+              <Grid item xs={8}>
+                <Item>xs=8</Item>
+              </Grid>
+              <Grid item xs={4}>
+                <Item>xs=4</Item>
+              </Grid>
+            </Grid> */}
+            <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+
+              <Avatar alt="Cindy Baker" src={bgImage} sx={{ width: 100, height: 100 }} />
+
+              {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+                {brand}
+              </MKTypography> */}
+            </div>
           </MKBox>
           <MKBox
             color="inherit"
@@ -551,7 +572,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Fosmos",
+  brand: "Alumni Association of Muslim Orphanage, Muttil - Wayanad",
   transparent: false,
   light: false,
   action: false,

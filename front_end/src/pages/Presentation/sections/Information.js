@@ -33,7 +33,7 @@ import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 function Information() {
   return (
     <MKBox component="section" py={6} my={6}>
-      <Container>
+      <Container style={{ paddingBottom: 15 }}>
         <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
@@ -42,9 +42,9 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Fosmo
                     <br />
-                    Material Kit
+                    The home for the homeless
                   </>
                 }
                 description="All the MUI components that you need in a development have been re-design with the new look."
@@ -61,7 +61,42 @@ function Information() {
               />
             </RotatingCard>
           </Grid>
-          <Grid item xs={12} lg={7} sx={{ ml: "auto" }}>
+
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    Fosmo
+                    <br />
+                    The news the inet halkagd hatelhk
+                  </>
+                }
+                description="All the MUI components that you need in a development have been re-design with the new look."
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="Discover More"
+                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                action={{
+                  type: "internal",
+                  route: "/sections/page-sections/page-headers",
+                  label: "start with header",
+                }}
+              />
+            </RotatingCard>
+
+          </Grid>
+
+          <Grid>
+
+
+          </Grid>
+
+
+          {/* <Grid item xs={12} lg={7} sx={{ ml: "auto" }}>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
@@ -95,7 +130,7 @@ function Information() {
                 />
               </Grid>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </MKBox>

@@ -22,9 +22,11 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
+import bgImage from "assets/images/campus_1.jpg";
+
+
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
+  // const bgImage = bgImage
 
   return (
     <MKBox
@@ -46,15 +48,13 @@ function BuiltByDevelopers() {
       <Container>
         <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
           <MKTypography variant="h4" color="white" fontWeight="bold">
-            Built by developers
+            Alumi Association of Muslim Orphanage, Muttil - Wayana
           </MKTypography>
           <MKTypography variant="h1" color="white" mb={1}>
-            Complex Documentation
+            Fosmo
           </MKTypography>
           <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
-            From colors, cards, typography to complex elements, you will find the full
-            documentation. Play with the utility classes and you will create unlimited combinations
-            for our components.
+            Fosmo is a togetherness of former studetns of the orphanage who want to utilize their skill and growth towards the those who are  in need.
           </MKTypography>
           <MKTypography
             component="a"
@@ -79,7 +79,7 @@ function BuiltByDevelopers() {
               },
             }}
           >
-            Read docs <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            Read more <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
           </MKTypography>
         </Grid>
       </Container>

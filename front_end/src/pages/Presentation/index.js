@@ -16,7 +16,14 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+
+
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -45,19 +52,16 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+import bgImage from "assets/images/campus_1.jpg";
+import Jamalsaheb from "assets/images/jamal_saheb.jpeg";
+
 
 function Presentation() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
-        // action={{
-        //   type: "external",
-        //   route: "/",
-        //   label: "contacts us",
-        //   color: "info",
-        // }}
+
         sticky
       />
       <MKBox
@@ -84,7 +88,7 @@ function Presentation() {
                 },
               })}
             >
-              Fosmos{" "}
+              Fosmo{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -93,7 +97,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              this site is under process and will be coming soon.
+              Alumni Association of Mulim orphanage, Muttil - Wayanad
             </MKTypography>
           </Grid>
         </Container>
@@ -110,13 +114,86 @@ function Presentation() {
         }}
       >
         <Counters />
-        <Information />
-        {/* <DesignBlocks /> */}
-        <Team />
+
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
         </Container>
-        <Container>
+
+        <Box sx={{ flexGrow: 1, mt: 10, mb: 10 }}>
+          <Container>
+            <Box sx={{ display: "flex", flexDirection: "column", mb: 5, justifyContent: "center", alignItems: "center" }}>
+              <Typography variant="h4" sx={{ mb: 2, }}>Messages from our leaders</Typography>
+            </Box>
+            <Grid container spacing={2}>
+              <Grid item sm={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={Jamalsaheb}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        Jamal Saheb
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={Jamalsaheb}
+                      alt="green iguana"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        Jamal Saheb
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item sm={12} md={4}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={Jamalsaheb}
+                      alt="bapu"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        Jamal Saheb
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+                {/* <PriceCard PriceCard={PriceCard3} /> */}
+              </Grid>
+
+            </Grid>
+          </Container>
+        </Box>
+
+        <Team />
+
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -159,9 +236,13 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
-        <Testimonials />
-        <Download />
+        </Container> */}
+
+
+        {/* <Testimonials /> */}
+
+        {/* <Download /> */}
+
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
@@ -170,7 +251,7 @@ function Presentation() {
                   Thank you for your support!
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                  please come again
                 </MKTypography>
               </Grid>
               <Grid
