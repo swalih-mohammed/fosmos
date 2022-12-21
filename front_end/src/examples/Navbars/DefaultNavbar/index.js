@@ -47,7 +47,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 import bgImage from "assets/images/fosmo_logo.jpeg";
 
 
-function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
+function DefaultNavbar({ routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
   const [dropdownName, setDropdownName] = useState("");
@@ -572,7 +572,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Alumni Association of Muslim Orphanage, Muttil - Wayanad",
+  // brand: "Alumni Association of Muslim Orphanage, Muttil - Wayanad",
   transparent: false,
   light: false,
   action: false,
@@ -583,7 +583,7 @@ DefaultNavbar.defaultProps = {
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
-  brand: PropTypes.string,
+  // brand: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   transparent: PropTypes.bool,
   light: PropTypes.bool,

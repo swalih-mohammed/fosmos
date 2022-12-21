@@ -33,15 +33,15 @@ import MKSocialButton from "components/MKSocialButton";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+// import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
+// import Information from "pages/Presentation/sections/Information";
 // import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 // import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+// import Testimonials from "pages/Presentation/sections/Testimonials";
+// import Download from "pages/Presentation/sections/Download";
 import Team from "pages/LandingPages/AboutUs/sections/Team";
 
 // Presentation page components
@@ -61,7 +61,6 @@ function Presentation() {
     <>
       <DefaultNavbar
         routes={routes}
-
         sticky
       />
       <MKBox
@@ -75,6 +74,7 @@ function Presentation() {
           placeItems: "center",
         }}
       >
+
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
             <MKTypography
