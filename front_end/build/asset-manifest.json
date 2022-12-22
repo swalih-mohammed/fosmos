@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.77f3d99c.js",
+    "main.js": "/static/js/main.d67d3b13.js",
     "static/js/787.f2bfe5c9.chunk.js": "/static/js/787.f2bfe5c9.chunk.js",
     "static/media/campus_1.jpg": "/static/media/campus_1.663d0917da993bc5be7a.jpg",
     "static/media/fosmo_logo.jpeg": "/static/media/fosmo_logo.38b8a4e89ef410c1f480.jpeg",
     "static/media/jamal_saheb.jpeg": "/static/media/jamal_saheb.2028d940d0796b0b6450.jpeg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.77f3d99c.js.map": "/static/js/main.77f3d99c.js.map",
+    "main.d67d3b13.js.map": "/static/js/main.d67d3b13.js.map",
     "787.f2bfe5c9.chunk.js.map": "/static/js/787.f2bfe5c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.77f3d99c.js"
+    "static/js/main.d67d3b13.js"
   ]
 }
