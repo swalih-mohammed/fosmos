@@ -28,6 +28,7 @@ class Member(models.Model):
     profession = models.CharField(max_length=250, blank=True, null=True,  choices=EDUCATION_CHOICES,  )
     graduated = models.CharField(max_length=250, blank=True, null=True)
     address = models.TextField(max_length=250, blank=True, null=True)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.first_name + " " + self.last_name
